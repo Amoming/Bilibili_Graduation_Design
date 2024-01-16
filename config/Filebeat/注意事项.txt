@@ -1,0 +1,2 @@
+启动命令：
+./filebeat -e -c danmaku2kafka.yml
