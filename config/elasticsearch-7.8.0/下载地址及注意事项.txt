@@ -3,6 +3,23 @@ time_format和datatime_format已启用,将在后续版本删除
 
 
 使用的是集群模式部署
+首先需要修改elasticSearch的配置文件elasticsearch.yml 
+cluster.name: dk-es
+node.name: node-1
+bootstrap.memory_lock: false
+network.host: 0.0.0.0
+node.master: true
+node.data: true
+http.port: 9200
+discovery.seed_hosts: ["192.168.200.102:9300","192.168.200.103:9300","19
+2.168.200.104:9300"]
+cluster.initial_master_nodes: ["192.168.200.102:9300","192.168.200.103:9
+300","192.168.200.104:9300"]
+
+同时对于之前启动失败，需要删除data/nodes/
+
+
+
 
 集群模式需要修改的配置
 sudo vim /etc/security/limits.conf 
