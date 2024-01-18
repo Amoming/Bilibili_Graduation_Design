@@ -3,6 +3,9 @@ time_format和datatime_format已启用,将在后续版本删除
 
 
 使用的是集群模式部署
+es 启动需要创建es账户，
+首先切换到es，然后执行es.sh
+
 首先需要修改elasticSearch的配置文件elasticsearch.yml 
 cluster.name: dk-es
 node.name: node-1
