@@ -1,7 +1,0 @@
-选择单一集群启动
-安装参考 https://www.cnblogs.com/756623607-zhang/p/17412640.html
-需要升级gcc版本
-同时临时启用该gcc     scl enable devtoolset-9 bash
-
-对于需要后台启动使用
-./redis usr/local/redis/etc/redis.conf 命令

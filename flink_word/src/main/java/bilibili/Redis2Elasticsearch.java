@@ -17,9 +17,9 @@ public class Redis2Elasticsearch {
     public static void main(String[] args) throws Exception {
         // 创建执行环境
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
-
+        int defaultParallel = env.getParallelism();
         // 从redis读取数据
-        DataStreamSource<Tuple2<String, String>> inputStream = env.addSource(new RedisClusterUtils.RedisClusterSource());
+        DataStreamSource<Tuple2<String, String>> inputStream = env.addSource(new RedisClusterUtils.RedisSource()).setParallelism(1);
         inputStream.print();
 
 //        注意:可能收到两个warning,修复后可能会出现问题
@@ -35,12 +35,12 @@ public class Redis2Elasticsearch {
                         JSONObject json = JSON.parseObject(data);
 //                        String indexName = json.getString("type");
 //                        仅测试用
-                        String indexName ="msg_test";
+                        String indexName ="danmu_msg";
 
                         String documentId = json.getString("id_str");
                         return Tuple3.of(indexName, documentId, json);
                     }
-                });
+                }).setParallelism(defaultParallel);
 
         stream.print();
         // 创建ElasticsearchSink

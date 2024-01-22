@@ -1,6 +1,3 @@
-时间戳使用timestamp,在Kibana高级设置中将时区设置为PRC
-time_format和datatime_format已启用,将在后续版本删除
-
 
 使用的是集群模式部署
 es 启动需要创建es账户，

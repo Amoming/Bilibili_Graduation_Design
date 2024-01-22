@@ -68,7 +68,7 @@ public class EsUtils {
     public static ElasticsearchSink.Builder<Tuple3<String, String, JSONObject>> createElasticsearchSink() {
         // 设置Elasticsearch连接信息
         List<HttpHost> httpHosts = new ArrayList<>();
-        httpHosts.add(new HttpHost(DanmakuUtils.DanmakuConfig.ES_HOST, DanmakuUtils.DanmakuConfig.ES_PORT, "http"));
+        httpHosts.add(new HttpHost(DanmakuConfig.ES_HOST, DanmakuConfig.ES_PORT, "http"));
 
         ElasticsearchSink.Builder<Tuple3<String, String, JSONObject>> esSinkBuilder = new ElasticsearchSink.Builder<>(
                 httpHosts,

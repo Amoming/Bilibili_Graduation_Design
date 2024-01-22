@@ -31,6 +31,9 @@ hosts:
 
 ## 鸣谢
 
-感谢 [https://github.com/Nemo2011/bilibili-api](https://github.com/Nemo2011/bilibili-api) 提供的爬虫程序。
+感谢 [https://github.com/Nemo2011/bilibili-api](https://github.com/Nemo2011/bilibili-api) 提供的爬虫程序（bilibili_api） 由于旧版本弹幕文件会丢失，pip下载的最老版本会出现ssl错误，新版本会出现Credential类未提供sessdata错误舍弃。
+
+感谢 [https://github.com/xfgryujk/blivedm](https://github.com/xfgryujk/blivedm) 提供的爬虫程序 在用。
 
 感谢 [https://github.com/hiDaDeng/cnsenti](https://github.com/hiDaDeng/cnsenti) 提供的7情绪词典，它是基于大连理工大学情感本体库词典制作的。
+

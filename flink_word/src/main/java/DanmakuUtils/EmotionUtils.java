@@ -68,7 +68,7 @@ public class EmotionUtils {
                     if (Jus.contains(word)) return "惧";
                     if (Wus.contains(word)) return "恶";
                     if (Jings.contains(word)) return "惊";
-                    return "";
+                    return ""; // 键
                 }, Collectors.counting()));
 
         Map<String, Object> finalResult = new HashMap<>();

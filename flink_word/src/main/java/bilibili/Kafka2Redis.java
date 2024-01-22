@@ -85,7 +85,7 @@ public class Kafka2Redis {
                 });
 
 
-        stream.addSink(new RedisClusterUtils.RedisClusterSink(600));
+        stream.addSink(new RedisClusterUtils.RedisSink(600));
 
 
         // 输出到控制台
